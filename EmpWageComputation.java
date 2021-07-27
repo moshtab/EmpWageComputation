@@ -1,18 +1,26 @@
 package EmpWageComp;
 
 public class EmpWageComputation {
+	
+	public static final int isFulltime = 0;
+	public static final int isparttime  = 1;
+	public static final int  wage_per_hr = 20;
+	public static final int  maxHrs = 100;
+	public static final int  No_of_working_days = 20;
+	
+	
 
 	public static void main(String[] args) {
 	
-		int isFullTime = 0;
-		int isparttime = 1;
+		
+		int empHrs=0;
+		int totalworkingdays=0;
 		int workingHr=0;
-		int wage_per_hr=20;
-		int No_of_working_days=20;
 		int Emp_wage=0;
-		for(int day=0;day<No_of_working_days;day++)
-		{	
-    	int empCheck = (int) Math.floor(Math.random() * 10) % 3;
+		
+		while(empHrs<=maxHrs && totalworkingdays<=No_of_working_days)
+	    {
+	    int empCheck = (int) Math.floor(Math.random() * 10) % 3;
     	switch(empCheck)
     	{
     	   case 0:
@@ -30,9 +38,11 @@ public class EmpWageComputation {
     	      workingHr=0;
     	      break;
     	   }
-    	}  
+    	}
+    	empHrs += workingHr;
   
     	Emp_wage = Emp_wage+(workingHr*wage_per_hr);
+    	totalworkingdays++;
 		}
 		System.out.println(Emp_wage);
 		
