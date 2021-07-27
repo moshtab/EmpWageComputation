@@ -8,6 +8,10 @@ public class EmpWageComputation {
 		int isparttime = 1;
 		int workingHr=0;
 		int wage_per_hr=20;
+		int No_of_working_days=20;
+		int Emp_wage=0;
+		for(int day=0;day<No_of_working_days;day++)
+		{	
     	int empCheck = (int) Math.floor(Math.random() * 10) % 3;
     	switch(empCheck)
     	{
@@ -25,10 +29,13 @@ public class EmpWageComputation {
     	   {	
     	      workingHr=0;
     	      break;
-    	   } 
-    	}
-    	int Emp_wage = wage_per_hr*workingHr;
-    	System.out.println(Emp_wage);
+    	   }
+    	}  
+  
+    	Emp_wage = Emp_wage+(workingHr*wage_per_hr);
+		}
+		System.out.println(Emp_wage);
+		
 	}
 
 }
