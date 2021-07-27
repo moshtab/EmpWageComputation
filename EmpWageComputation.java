@@ -9,12 +9,24 @@ public class EmpWageComputation {
 		int workingHr=0;
 		int wage_per_hr=20;
     	int empCheck = (int) Math.floor(Math.random() * 10) % 3;
-    	if(empCheck == isFullTime)
-           workingHr=8;
-    	else if(empCheck == isparttime )
-    		workingHr=4;
-    	else
-    	   workingHr=0;
+    	switch(empCheck)
+    	{
+    	   case 0:
+    	   {
+    	      workingHr=8;
+    	      break;
+    	   }
+    	   case 1:
+    	   {	
+    	      workingHr=4;
+    	      break;
+    	   }
+    	   case 2:
+    	   {	
+    	      workingHr=0;
+    	      break;
+    	   } 
+    	}
     	int Emp_wage = wage_per_hr*workingHr;
     	System.out.println(Emp_wage);
 	}
