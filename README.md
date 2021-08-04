@@ -7,7 +7,7 @@ I/P :- We have (Wage per Hour is 20),(Full day Hour = 8),(Part time Hour = 4),(T
 
 Logic :- We have to calculate total salary of employee for a month by using following formula.
 
-EmployeeWage=EmployeeWage+(WagePerHr*WorkingHr) 
+         EmployeeWage=EmployeeWage+(WagePerHr*WorkingHr) 
 
 O/P :- EmployeeWage
 
